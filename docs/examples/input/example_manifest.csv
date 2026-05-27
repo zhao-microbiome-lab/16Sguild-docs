@@ -1,0 +1,5 @@
+sample-id,absolute-filepath,direction
+S1,path/to/fastq/S1_1.fastq,forward
+S1,path/to/fastq/S1_2.fastq,reverse
+S2,path/to/fastq/S2_1.fastq,forward
+S2,path/to/fastq/AARP_mini/S2_2.fastq,reverse

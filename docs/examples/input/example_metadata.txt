@@ -1,0 +1,3 @@
+ID	Cohort	host_sex	lung_cancer	smk_stat
+S1	Cohort_1	male	0	2
+S2	Cohort_1	female	0	1

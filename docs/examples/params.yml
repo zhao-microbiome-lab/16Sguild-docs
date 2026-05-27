@@ -1,0 +1,21 @@
+
+# Required initial parameters
+samplesheet: "manifest.csv" # directions to the manifest for qiime import relative to this file
+metadata: "metadata.txt"
+base_name: "base_name_dataset" # name that will appear in the output file naming
+input_type: "SampleData[PairedEndSequencesWithQuality]" # input type for qiime import
+input_format: "PairedEndFastqManifestPhred33" # input format for qiime import
+trim_forward: "GTGCCAGCMGCCGCGGTAA" # primer
+trim_reverse: "GGACTACHVGGGTWTCTAAT" # primer
+
+# Required parameters updated based on data
+# End of Part 1
+trunc_forward: "" # position to truncate forward reads in qiime dada2
+trunc_reverse: "" # position to truncate reverse reads in qiime dada2
+max: "" # maximum value alpha rarefaction plot
+
+# End of Part 2
+linkage_table: /path/to/file.txt # txt file obtained from database after uploading .rds file
+
+# End of Part 3 
+sampling_depth: "" # sampling depth for alpha rarefaction

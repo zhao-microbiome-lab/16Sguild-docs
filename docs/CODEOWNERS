@@ -1,0 +1,12 @@
+# Code owners for the 16Sguild pipeline
+# These owners will be automatically requested for review on pull requests
+
+# Global code owners for the entire repository
+* @rachelgriffard @rosnzhao
+
+# Specific directories can have additional owners
+/main.nf @rachelgriffard @rosnzhao
+/processes/ @rachelgriffard @rosnzhao
+/conf/ @rachelgriffard @rosnzhao
+/docker/ @rachelgriffard @rosnzhao
+/docs/ @rachelgriffard @rosnzhao @sarahegan1 @odelmas-sci

@@ -1,0 +1,192 @@
+:root {
+  /* === Core brand colors === */
+  --md-primary-fg-color: #840024;
+  --md-primary-fg-color--light: #a3002d;
+  --md-primary-fg-color--dark: #5e001a;
+
+  /* Text ON top of the primary color (header/nav) — white gives contrast */
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
+
+  /* === Accent — controls links, buttons, checkboxes, hover highlights === */
+  --md-accent-fg-color: #840024;
+  --md-accent-fg-color--transparent: rgba(132, 0, 36, 0.1);
+  --md-accent-bg-color: #ffffff;
+
+  /* === Inline link color in body text === */
+  --md-typeset-a-color: #840024;
+}
+
+/* Hover state for links */
+.md-typeset a:hover {
+  color: var(--md-primary-fg-color--light);
+}
+
+/* Buttons (used by search, tags, etc.) */
+.md-button {
+  border-color: var(--md-primary-fg-color) !important;
+  color: var(--md-primary-fg-color) !important;
+}
+
+.md-button--primary {
+  background-color: var(--md-primary-fg-color) !important;
+  border-color: var(--md-primary-fg-color) !important;
+  color: var(--md-primary-bg-color) !important;
+}
+
+.md-button:hover {
+  background-color: var(--md-primary-fg-color) !important;
+  color: var(--md-primary-bg-color) !important;
+}
+
+/* Search focus ring */
+.md-search__input:focus {
+  outline-color: var(--md-primary-fg-color);
+}
+
+/* Tags plugin */
+.md-tag {
+  background-color: var(--md-accent-fg-color--transparent);
+  color: var(--md-primary-fg-color--dark);
+}
+
+/* Override ALL admonition type colors to use your brand */
+.md-typeset .admonition,
+.md-typeset details {
+  border-color: var(--md-primary-fg-color) !important;
+}
+
+/* Covers every built-in type: note, info, tip, warning, etc. */
+.md-typeset .admonition > .admonition-title,
+.md-typeset .admonition > summary,
+.md-typeset details > summary {
+  background-color: rgba(132, 0, 36, 0.1) !important;
+}
+
+/* The icon inside the summary bar */
+.md-typeset .admonition > .admonition-title::before,
+.md-typeset details > summary::before {
+  background-color: var(--md-primary-fg-color) !important;
+}
+
+/* Content inside details blocks */
+.md-typeset details {
+  font-size: 0.8rem !important;
+}
+
+.md-typeset details * {
+  font-size: 0.8rem !important;
+}
+
+/* Wipe out type-specific color variables that Material sets per-type */
+.md-typeset .admonition.note,
+.md-typeset .admonition.info,
+.md-typeset .admonition.tip,
+.md-typeset .admonition.warning,
+.md-typeset .admonition.danger,
+.md-typeset .admonition.success,
+.md-typeset .admonition.question,
+.md-typeset .admonition.failure,
+.md-typeset .admonition.bug,
+.md-typeset .admonition.example,
+.md-typeset .admonition.quote,
+.md-typeset details.note,
+.md-typeset details.info,
+.md-typeset details.tip,
+.md-typeset details.warning,
+.md-typeset details.danger {
+  --md-admonition-fg-color: var(--md-primary-fg-color);
+  border-color: var(--md-primary-fg-color) !important;
+}
+
+/* Links inside admonitions — underline to distinguish from surrounding text */
+.md-typeset .admonition a,
+.md-typeset details a {
+  text-decoration: underline;
+}
+
+/* Custom Nextflow admonition type */
+:root {
+  --md-admonition-icon--nextflow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M.005 4.424V0c6.228.259 11.227 5.268 11.477 11.506H7.058C6.828 7.715 3.786 4.673.005 4.424m7.082 8.089h4.424C11.251 18.741 6.242 23.741.005 23.99v-4.423c3.79-.231 6.832-3.273 7.082-7.054m9.826-1.036h-4.424C12.749 5.249 17.758.25 23.995 0v4.424c-3.79.23-6.832 3.263-7.082 7.053m7.082 8.099V24c-6.228-.259-11.227-5.268-11.477-11.506h4.424c.23 3.791 3.272 6.833 7.053 7.082'/%3E%3C/svg%3E");
+}
+
+.md-typeset .admonition.nextflow,
+.md-typeset details.nextflow {
+  border-color: #0DC09D !important;
+}
+
+.md-typeset .admonition.nextflow > .admonition-title,
+.md-typeset details.nextflow > summary {
+  background-color: rgba(13, 192, 157, 0.1) !important;
+}
+
+.md-typeset .admonition.nextflow > .admonition-title::before,
+.md-typeset details.nextflow > summary::before {
+  background-color: #0DC09D !important;
+  -webkit-mask-image: var(--md-admonition-icon--nextflow);
+          mask-image: var(--md-admonition-icon--nextflow);
+}
+
+/* Bold headers */
+.md-typeset h1 {
+  font-weight: 700 !important;
+}
+
+.md-typeset h2 {
+  font-weight: 700 !important;
+}
+
+.md-typeset h3 {
+  font-weight: 700 !important;
+}
+
+/* Custom param admonition type */
+:root {
+  --md-admonition-icon--param: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z'/%3E%3C/svg%3E");
+}
+
+.md-typeset .admonition.param,
+.md-typeset details.param {
+  border-color: #4A90D9 !important;
+}
+
+.md-typeset .admonition.param > .admonition-title,
+.md-typeset details.param > summary {
+  background-color: rgba(74, 144, 217, 0.1) !important;
+  font-family: var(--md-code-font-family, monospace) !important;
+}
+
+.md-typeset .admonition.param > .admonition-title::before,
+.md-typeset details.param > summary::before {
+  background-color: #4A90D9 !important;
+  -webkit-mask-image: var(--md-admonition-icon--param);
+          mask-image: var(--md-admonition-icon--param);
+}
+
+/* Light mode — black admonition text */
+.md-typeset .admonition,
+.md-typeset details {
+  color: #000000 !important;
+}
+
+.md-typeset .admonition p,
+.md-typeset .admonition li,
+.md-typeset .admonition code,
+.md-typeset details p,
+.md-typeset details li {
+  color: #000000 !important;
+}
+
+/* Dark mode — white admonition text */
+[data-md-color-scheme="slate"] .md-typeset .admonition,
+[data-md-color-scheme="slate"] .md-typeset details {
+  color: #ffffff !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition p,
+[data-md-color-scheme="slate"] .md-typeset .admonition li,
+[data-md-color-scheme="slate"] .md-typeset .admonition code,
+[data-md-color-scheme="slate"] .md-typeset details p,
+[data-md-color-scheme="slate"] .md-typeset details li {
+  color: #ffffff !important;
+}
