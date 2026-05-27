@@ -1,8 +1,16 @@
+<div align="center">
+    <img src="assets/16Sguild_long.png" alt="16S Guild Long" width="450"/>
+</div>
+
 # 16Sguild: Guild-based 16S-rRNA sequencing analysis pipeline
 
-[![16S Guild Database](assets/16SguildDatabaseButton.PNG)](https://biostats-shinyr.kumc.edu/16SguildDB/)
-
 A Nextflow workflow for guild-based 16S-rRNA sequencing analysis such as introduced by [Wu and Zhao et al., 2021](https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-021-00840-y).
+
+<div align="center">
+  <a href="https://biostats-dashboard.kumc.edu/16SguildDB/">
+    <img src="assets/16SguildDatabaseButton.PNG" alt="16S Guild Database" width="200"/>
+  </a>
+</div>
 
 ---
 
