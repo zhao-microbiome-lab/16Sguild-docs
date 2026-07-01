@@ -7,7 +7,7 @@
 A Nextflow workflow for guild-based 16S-rRNA sequencing analysis such as introduced by [Wu and Zhao et al., 2021](https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-021-00840-y).
 
 <div align="center">
-  <a href="https://biostats-dashboard.kumc.edu/16SguildDB/">
+  <a href="https://biostats-shinyr.kumc.edu/16SguildDB/">
     <img src="assets/16SguildDatabaseButton.PNG" alt="16S Guild Database" width="200"/>
   </a>
 </div>
@@ -82,7 +82,7 @@ An example parameters file is available in [`examples/params.yml`](examples/para
 | `metadata` | Path to the sample metadata table (TSV format) |
 | `trunc_forward` | Position at which to truncate forward reads in QIIME2 DADA2 (experiment-dependent) |
 | `trunc_reverse` | Position at which to truncate reverse reads in QIIME2 DADA2 (experiment-dependent) |
-| `linkage_table` | Table from [16Sguild database](https://biostats-dashboard.kumc.edu/16SguildDB/) assigning UUIDs to ASVs (experiment-dependent) |
+| `linkage_table` | Table from [16Sguild database](https://biostats-shinyr.kumc.edu/16SguildDB/) assigning UUIDs to ASVs (experiment-dependent) |
 | `max` | Maximum depth value used for alpha rarefaction (experiment-dependent) |
 | `sampling_depth` | Rarefaction sampling depth for diversity analysis (experiment-dependent) |
 
@@ -121,7 +121,7 @@ No manual installation of software is needed—these containers are pulled autom
 
 - All results are written to the `results/` directory by default.
 - `results/main_results` contains output files from the pipeline.
-- `results/database` contains the `.rds` file of the linkage table that can be uploaded to the [database](https://biostats-dashboard.kumc.edu/16SguildDB/).
+- `results/database` contains the `.rds` file of the linkage table that can be uploaded to the [database](https://biostats-shinyr.kumc.edu/16SguildDB/).
 - `results/visualizations` contains files that can be used on the [QIIME2 viewing platform](https://view.qiime2.org/).
 - Intermediate files are preserved in the Nextflow work directory for reproducibility and in `results/intermediate_results` for easy access.
 - Results files are symlinked by default. Users can set `publish.mode = 'copy'` to change this.
