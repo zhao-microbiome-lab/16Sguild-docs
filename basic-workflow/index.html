@@ -839,7 +839,7 @@
 <p>The human microbiome is composed of trillions of microorganisms, including bacteria, archaea, viruses, and fungi. Understanding the composition and diversity of these communities is critical for studying their role in health and disease. One of the most widely used methods for profiling bacterial communities is targeted DNA sequencing of the 16S rRNA gene.</p>
 <p>When analyzing this data, the sequences are corrected for sequencing errors using tools such as DADA2 (Calahan et al., 2016). These unique DNA sequences are known as amplicon sequence variants (ASVs). ASVs are a unique DNA sequence of the target region (e.g., V4) that is distinguished from all others by even a single nucleotide. These ASVs provide higher resolution, reproducibility across studies, and the ability to detect fine-scale differences in microbial communities when compared to conventional taxonomic approaches.</p>
 <p>We have created a novel method for looking at the microbiome as an ecosystem of high-resolution ASV units that interact with each other in correlated ways based on function. These interacting modules are called <strong>guilds</strong>: ecologically coherent groups that respond together to environmental inputs, perform complementary metabolic functions, and compete or cooperate as groups.</p>
-<p>In this pipeline, individual microbial entities—ASVs—are identified and tagged with a universal unique identifier (UUID) for precise tracking. This approach is database-independent, avoiding limitations of incomplete or biased reference databases. Rather, the UUIDs are stored in a <a href="https://biostats-dashboard.kumc.edu/16SguildDB/">database</a> with their unique, unchanging ASV sequence. These ASVs are clustered into co-abundance groups based on co-abundance behavior, which may represent guilds where members share ecological niches and exhibit similar abundance patterns.</p>
+<p>In this pipeline, individual microbial entities—ASVs—are identified and tagged with a universal unique identifier (UUID) for precise tracking. This approach is database-independent, avoiding limitations of incomplete or biased reference databases. Rather, the UUIDs are stored in a <a href="https://biostats-shinyr.kumc.edu/16SguildDB/">database</a> with their unique, unchanging ASV sequence. These ASVs are clustered into co-abundance groups based on co-abundance behavior, which may represent guilds where members share ecological niches and exhibit similar abundance patterns.</p>
 </details>
 <details class="nextflow">
 <summary>About Nextflow</summary>
@@ -1102,7 +1102,7 @@ min:<span class="w"> </span><span class="c1"># optional, default 100</span>
 <p>Part 2 is involved with denoising and quality filtering. It also generates a table of the ASVs contained in the sample.</p>
 <p>During Part 2, take the table of ASVs — an RDS file found at <code>results/main_results/s11a_database/input_bundle.rds</code>. Download this file and upload it to the database website:</p>
 <div align="center">
-  <a href="https://biostats-dashboard.kumc.edu/16SguildDB/">
+  <a href="https://biostats-shinyr.kumc.edu/16SguildDB/">
     <img src="../assets/16SguildDatabaseButton.PNG" alt="16S Guild Database" width="150"/>
   </a>
 </div>

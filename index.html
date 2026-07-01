@@ -706,7 +706,7 @@
 <h1 id="16sguild-guild-based-16s-rrna-sequencing-analysis-pipeline">16Sguild: Guild-based 16S-rRNA sequencing analysis pipeline</h1>
 <p>A Nextflow workflow for guild-based 16S-rRNA sequencing analysis such as introduced by <a href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-021-00840-y">Wu and Zhao et al., 2021</a>.</p>
 <div align="center">
-  <a href="https://biostats-dashboard.kumc.edu/16SguildDB/">
+  <a href="https://biostats-shinyr.kumc.edu/16SguildDB/">
     <img src="assets/16SguildDatabaseButton.PNG" alt="16S Guild Database" width="200"/>
   </a>
 </div>
@@ -799,7 +799,7 @@ sampling_depth:<span class="w"> </span><span class="s2">&quot;xxx&quot;</span>
 </tr>
 <tr>
 <td><code>linkage_table</code></td>
-<td>Table from <a href="https://biostats-dashboard.kumc.edu/16SguildDB/">16Sguild database</a> assigning UUIDs to ASVs (experiment-dependent)</td>
+<td>Table from <a href="https://biostats-shinyr.kumc.edu/16SguildDB/">16Sguild database</a> assigning UUIDs to ASVs (experiment-dependent)</td>
 </tr>
 <tr>
 <td><code>max</code></td>
@@ -841,7 +841,7 @@ sampling_depth:<span class="w"> </span><span class="s2">&quot;xxx&quot;</span>
 <ul>
 <li>All results are written to the <code>results/</code> directory by default.</li>
 <li><code>results/main_results</code> contains output files from the pipeline.</li>
-<li><code>results/database</code> contains the <code>.rds</code> file of the linkage table that can be uploaded to the <a href="https://biostats-dashboard.kumc.edu/16SguildDB/">database</a>.</li>
+<li><code>results/database</code> contains the <code>.rds</code> file of the linkage table that can be uploaded to the <a href="https://biostats-shinyr.kumc.edu/16SguildDB/">database</a>.</li>
 <li><code>results/visualizations</code> contains files that can be used on the <a href="https://view.qiime2.org/">QIIME2 viewing platform</a>.</li>
 <li>Intermediate files are preserved in the Nextflow work directory for reproducibility and in <code>results/intermediate_results</code> for easy access.</li>
 <li>Results files are symlinked by default. Users can set <code>publish.mode = 'copy'</code> to change this.</li>
