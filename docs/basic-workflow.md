@@ -29,7 +29,7 @@ In this vignette, we walk through how to run the pipeline step by step. Users ca
 
     We have created a novel method for looking at the microbiome as an ecosystem of high-resolution ASV units that interact with each other in correlated ways based on function. These interacting modules are called **guilds**: ecologically coherent groups that respond together to environmental inputs, perform complementary metabolic functions, and compete or cooperate as groups.
 
-    In this pipeline, individual microbial entities—ASVs—are identified and tagged with a universal unique identifier (UUID) for precise tracking. This approach is database-independent, avoiding limitations of incomplete or biased reference databases. Rather, the UUIDs are stored in a [database](https://biostats-dashboard.kumc.edu/16SguildDB/) with their unique, unchanging ASV sequence. These ASVs are clustered into co-abundance groups based on co-abundance behavior, which may represent guilds where members share ecological niches and exhibit similar abundance patterns.
+    In this pipeline, individual microbial entities—ASVs—are identified and tagged with a universal unique identifier (UUID) for precise tracking. This approach is database-independent, avoiding limitations of incomplete or biased reference databases. Rather, the UUIDs are stored in a [database](https://biostats-shinyr.kumc.edu/16SguildDB/) with their unique, unchanging ASV sequence. These ASVs are clustered into co-abundance groups based on co-abundance behavior, which may represent guilds where members share ecological niches and exhibit similar abundance patterns.
 
 ??? nextflow "About Nextflow"
 
@@ -298,7 +298,7 @@ Part 2 is involved with denoising and quality filtering. It also generates a tab
 During Part 2, take the table of ASVs — an RDS file found at `results/main_results/s11a_database/input_bundle.rds`. Download this file and upload it to the database website:
 
 <div align="center">
-  <a href="https://biostats-dashboard.kumc.edu/16SguildDB/">
+  <a href="https://biostats-shinyr.kumc.edu/16SguildDB/">
     <img src="../assets/16SguildDatabaseButton.PNG" alt="16S Guild Database" width="150"/>
   </a>
 </div>
