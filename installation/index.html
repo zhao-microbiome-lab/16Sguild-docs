@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://zhao-microbiome-lab.github.io/16Sguild-docs/output/">
+        <link rel="canonical" href="https://zhao-microbiome-lab.github.io/16Sguild-docs/installation/">
       
       
-        <link rel="prev" href="../parameters/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../changelog/">
+        <link rel="next" href="../basic-workflow/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Output - 16Sguild</title>
+        <title>Installation - 16Sguild</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#output" class="md-skip">
+        <a href="#installation" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Output
+              Installation
             
           </span>
         </div>
@@ -260,10 +260,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../installation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -279,6 +306,76 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-16sguild" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running 16Sguild
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifying-your-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verifying Your Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -341,19 +438,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../output/" class="md-nav__link">
         
   
   
@@ -369,7 +457,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -448,6 +535,64 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-16sguild" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running 16Sguild
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifying-your-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verifying Your Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -463,191 +608,47 @@
 
 
 
-<h1 id="output">Output</h1>
-<p>Descriptions of all output files for guild-based analysis of 16S-rRNA sequencing data based on <a href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-021-00840-y">Wu and Zhao et al., 2021</a>.</p>
-<p>Output files will be located under the folder <code>/results</code>.</p>
+<div align="center">
+    <img src="assets/16Sguild_long.png" alt="16S Guild Long" width="450"/>
+</div>
+
+<h1 id="installation">Installation</h1>
+<p>Installation guide for guild-based analysis of 16S-rRNA sequencing data based on <a href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-021-00840-y">Wu and Zhao et al., 2021</a>.</p>
+<div align="center">
+  <a href="https://biostats-dashboard.kumc.edu/16SguildDB/">
+    <img src="assets/16SguildDatabaseButton.PNG" alt="16S Guild Database" width="200"/>
+  </a>
+</div>
+
 <hr />
-<table>
-<thead>
-<tr>
-<th>Subfolder</th>
-<th>Description</th>
-<th><code>16Sguild</code> process (step)</th>
-<th>Tool</th>
-<th>Link to Documentation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/main_results/s1_{base_name}_raw.qzv</code></td>
-<td>QIIME2 visualization summarizing the quality and distribution of the raw sequencing data before trimming</td>
-<td>Quality Check (s2)</td>
-<td>QIIME2</td>
-<td><a href="https://docs.qiime2.org/2024.10/plugins/available/demux/summarize/">Demux Summarize</a></td>
-</tr>
-<tr>
-<td><code>/main_results/s3_{base_name}_trimmed.qzv</code></td>
-<td>QIIME2 visualization (.qzv) summarizing the quality and distribution of the raw sequencing data after trimming</td>
-<td>Trimming (s3)</td>
-<td>QIIME2 (cutadapt)</td>
-<td><a href="https://docs.qiime2.org/2024.10/plugins/available/cutadapt/trim-paired/">Trimming</a></td>
-</tr>
-<tr>
-<td><code>/main_results/MULTIQC</code></td>
-<td>foldering containing the MultiQC file for all raw samples pooled together.</td>
-<td>MultiQC (s0)</td>
-<td>MultiQC</td>
-<td><a href="https://nf-co.re/modules/multiqc/">MultiQC</a></td>
-</tr>
-<tr>
-<td><code>/main_results/MULTIQC_trimmed</code></td>
-<td>foldering containing the MultiQC file for all trimmed samples pooled together.</td>
-<td>MultiQC (s0)</td>
-<td>MultiQC</td>
-<td><a href="https://nf-co.re/modules/multiqc/">MultiQC</a></td>
-</tr>
-<tr>
-<td><code>/main_results/s7_{base_name}_.qzv</code></td>
-<td>QIIME2 visualization of feature table summary of denoising statistics</td>
-<td>Denoise (s5)</td>
-<td>16Sguild</td>
-<td>Pipeline Feature</td>
-</tr>
-<tr>
-<td><code>/main_results/s11a_database</code></td>
-<td><code>rds</code> file for <a href="https://biostats-shinyr.kumc.edu/16SguildDB/">16Sguild database</a> assigning UUIDs to ASVs</td>
-<td>Filtering (s12)</td>
-<td>Database</td>
-<td>Pipeline Feature</td>
-</tr>
-<tr>
-<td><code>/main_results/s14_alpha-rarefaction.qzv</code></td>
-<td>QIIME2 visualization of alpha rarefaction</td>
-<td>Alpha rarefaction (s14)</td>
-<td>QIIME2</td>
-<td><a href="https://docs.qiime2.org/2024.10/plugins/available/diversity/index.html">Alpha rarefaction</a></td>
-</tr>
-<tr>
-<td><code>/main_results/s17_formatTable</code></td>
-<td>filtered ASV table</td>
-<td>Filtering (s17)</td>
-<td>16Sguild</td>
-<td>Pipeline Feature</td>
-</tr>
-<tr>
-<td><code>/main_results/s20_CAG</code></td>
-<td>tables and graphs for CAG results</td>
-<td>Plot CAG (s20)</td>
-<td>16Sguild</td>
-<td>Pipeline Feature</td>
-</tr>
-<tr>
-<td><code>/intermediate_results/s1</code></td>
-<td>import sequencing files into a QIIME 2 artifact (.qza file)</td>
-<td>Import (s1)</td>
-<td>QIIME2</td>
-<td><a href="https://docs.qiime2.org/2024.10/tutorials/importing/">Importing data</a></td>
-</tr>
-<tr>
-<td><code>/intermediate_results/s2</code></td>
-<td>QIIME2 artifact (.qza) summarizing the quality and distribution of the raw sequencing data after trimming</td>
-<td>Quality Check (s2)</td>
-<td>QIIME2</td>
-<td><a href="https://docs.qiime2.org/2024.10/plugins/available/demux/summarize/">Demux Summarize</a></td>
-</tr>
-<tr>
-<td><code>/intermediate_results/FASTQC</code></td>
-<td>folder containing the FASTQC files for the raw samples</td>
-<td>FASTQC (s0)</td>
-<td>FASTQC</td>
-<td><a href="https://nf-co.re/modules/fastqc/">FASTQC</a></td>
-</tr>
-<tr>
-<td><code>/intermediate_results/FASTQC_trimmed</code></td>
-<td>folder containing the FASTQC files for the trimmed samples</td>
-<td>FASTQC (s0)</td>
-<td>FASTQC</td>
-<td><a href="https://nf-co.re/modules/fastqc/">FASTQC</a></td>
-</tr>
-<tr>
-<td><code>/intermediate_results/s5</code></td>
-<td></td>
-<td>Quality filtering (s5)</td>
-<td>QIIME2 (DADA2)</td>
-<td><a href="https://amplicon-docs.qiime2.org/en/stable/references/plugins/dada2.html#q2-action-dada2-denoise-paired">DADA2</a></td>
-</tr>
-<tr>
-<td><code>/intermediate_results/s6_{base_name}_group#_denoising-stats.qzv</code></td>
-<td></td>
-<td>Denoise (s5)</td>
-<td>16Sguild</td>
-<td>Pipeline Feature</td>
-</tr>
-<tr>
-<td><code>/intermediate_results/s9</code></td>
-<td>converts QIIME2 artifact into FASTA file</td>
-<td>Filtering (s12)</td>
-<td>16Sguild</td>
-<td>Pipeline Feature</td>
-</tr>
-<tr>
-<td><code>/intermediate_results/s10</code></td>
-<td></td>
-<td>Quality filtering (s10)</td>
-<td>16Sguild</td>
-<td>Pipeline Feature</td>
-</tr>
-<tr>
-<td><code>/intermediate_results/s11b</code></td>
-<td>UUID and txt files for database</td>
-<td>Filtering (s12)</td>
-<td>Database</td>
-<td>Pipeline Feature</td>
-</tr>
-<tr>
-<td><code>/intermediate_results/s12</code></td>
-<td>Prepare both sequences and feature table into proper QIIME-compatible artifacts</td>
-<td>QIIME2 Import (s12)</td>
-<td>QIIME2</td>
-<td>Pipeline Feature</td>
-</tr>
-<tr>
-<td><code>/intermediate_results/s13</code></td>
-<td>This set of steps produces a rooted phylogenetic tree (.qza) by aligning representative sequences, filtering the alignment, building an unrooted tree, and then applying midpoint rooting.</td>
-<td>(s13)</td>
-<td>QIIME2</td>
-<td>Pipeline Feature</td>
-</tr>
-<tr>
-<td><code>/intermediate_results/alphaBetaDiversity</code></td>
-<td>QIIME2 visualization of beta diversity plots</td>
-<td>Diversity analysis (s15)</td>
-<td>QIIME2</td>
-<td><a href="https://docs.qiime2.org/2024.10/plugins/available/diversity/index.html">Diversity</a></td>
-</tr>
-<tr>
-<td><code>/intermediate_results/s15</code></td>
-<td></td>
-<td>Diversity analysis (s15)</td>
-<td>QIIME2</td>
-<td><a href="https://docs.qiime2.org/2024.10/plugins/available/diversity/index.html">Diversity</a></td>
-</tr>
-<tr>
-<td><code>/intermediate_results/s16</code></td>
-<td>exporting results</td>
-<td>Export (s16)</td>
-<td>16Sguild</td>
-<td>Pipeline Feature</td>
-</tr>
-<tr>
-<td><code>/intermediate_results/s19</code></td>
-<td>correlation analysis results</td>
-<td>Correlation analysis (s19)</td>
-<td>FastSpar</td>
-<td><a href="https://github.com/scwatts/fastspar">FastSpar</a></td>
-</tr>
-</tbody>
-</table>
+<p><img alt="Workflow" src="../assets/16Sguild_metroMap.png" /></p>
+<p><em>Basic workflow overview of 16Sguild pipeline.</em></p>
+<h2 id="installation_1">Installation</h2>
+<p>The following sections detail dependencies and installation instructions for usage of the 16Sguild pipeline.</p>
+<h3 id="dependencies">Dependencies</h3>
+<p><strong>Nextflow</strong></p>
+<p>To use 16Sguild, users must have Nextflow installed (version 25.04 through 26.04). Please see <a href="https://docs.seqera.io/nextflow/install">Nextflow documentation</a> for installation instructions.</p>
+<p><strong>Apptainer/Singularity/Docker</strong></p>
+<p>16Sguild runs all tools inside containers, so users must have one of <a href="https://docs.docker.com/get-docker/">Docker</a>, <a href="https://docs.sylabs.io/guides/latest/user-guide/">Singularity</a>, or <a href="https://apptainer.org/docs/user/latest/">Apptainer</a> installed and available on <code>PATH</code>. No manual installation of the underlying bioinformatics tools is required—containers are pulled automatically when the pipeline runs (see <a href="../#containers">Containers</a> for the list of images used).</p>
+<h2 id="running-16sguild">Running 16Sguild</h2>
+<p>When launching the pipeline, tell Nextflow which container engine to use with the <code>-profile</code> flag: <code>docker</code>, <code>singularity</code>, or <code>apptainer</code>. HPC users can instead select one of the profiles defined in <code>conf/</code> (e.g. for SLURM); see your cluster's Nextflow configuration for details.</p>
+<p>Run directly from GitHub (suggested):</p>
+<div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>zhao-microbiome-lab/16Sguild/main.nf<span class="w"> </span>-params-file<span class="w"> </span>examples/params.yml<span class="w"> </span>-profile<span class="w"> </span>docker
+</code></pre></div>
+<p>Or, clone the repository and launch the pipeline:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/zhao-microbiome-lab/16Sguild.git
+<span class="nb">cd</span><span class="w"> </span>16Sguild
+nextflow<span class="w"> </span>run<span class="w"> </span>main.nf<span class="w"> </span>-params-file<span class="w"> </span>examples/params.yml<span class="w"> </span>-profile<span class="w"> </span>docker
+</code></pre></div>
+<h2 id="verifying-your-installation">Verifying Your Installation</h2>
+<p>Confirm Nextflow and your container engine are installed and on <code>PATH</code>:</p>
+<div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>-version
+docker<span class="w"> </span>--version<span class="w">   </span><span class="c1"># or: singularity --version / apptainer --version</span>
+</code></pre></div>
+<p>Then do a quick end-to-end run against the bundled test dataset:</p>
+<div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>zhao-microbiome-lab/16Sguild/main.nf<span class="w"> </span>-profile<span class="w"> </span>test,docker
+</code></pre></div>
+<p>The <code>test</code> profile runs a minimal dataset and completing without errors confirms your Nextflow and container setup are working correctly.</p>
 
 
 
