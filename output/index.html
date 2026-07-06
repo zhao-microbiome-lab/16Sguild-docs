@@ -438,6 +438,189 @@
 
 <h1 id="output">Output</h1>
 <p>Descriptions of all output files for guild-based analysis of 16S-rRNA sequencing data based on <a href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-021-00840-y">Wu and Zhao et al., 2021</a>.</p>
+<p>Output files will be located under the folder <code>/results</code>.</p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Subfolder</th>
+<th>Description</th>
+<th><code>16Sguild</code> process (step)</th>
+<th>Tool</th>
+<th>Link to Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/main_results/s1_{base_name}_raw.qzv</code></td>
+<td>QIIME2 visualization summarizing the quality and distribution of the raw sequencing data before trimming</td>
+<td>Quality Check (s2)</td>
+<td>QIIME2</td>
+<td><a href="https://docs.qiime2.org/2024.10/plugins/available/demux/summarize/">Demux Summarize</a></td>
+</tr>
+<tr>
+<td><code>/main_results/s3_{base_name}_trimmed.qzv</code></td>
+<td>QIIME2 visualization (.qzv) summarizing the quality and distribution of the raw sequencing data after trimming</td>
+<td>Trimming (s3)</td>
+<td>QIIME2 (cutadapt)</td>
+<td><a href="https://docs.qiime2.org/2024.10/plugins/available/cutadapt/trim-paired/">Trimming</a></td>
+</tr>
+<tr>
+<td><code>/main_results/MULTIQC</code></td>
+<td>foldering containing the MultiQC file for all raw samples pooled together.</td>
+<td>MultiQC (s0)</td>
+<td>MultiQC</td>
+<td><a href="https://nf-co.re/modules/multiqc/">MultiQC</a></td>
+</tr>
+<tr>
+<td><code>/main_results/MULTIQC_trimmed</code></td>
+<td>foldering containing the MultiQC file for all trimmed samples pooled together.</td>
+<td>MultiQC (s0)</td>
+<td>MultiQC</td>
+<td><a href="https://nf-co.re/modules/multiqc/">MultiQC</a></td>
+</tr>
+<tr>
+<td><code>/main_results/s7_{base_name}_.qzv</code></td>
+<td>QIIME2 visualization of feature table summary of denoising statistics</td>
+<td>Denoise (s5)</td>
+<td>16Sguild</td>
+<td>Pipeline Feature</td>
+</tr>
+<tr>
+<td><code>/main_results/s11a_database</code></td>
+<td><code>rds</code> file for <a href="https://biostats-shinyr.kumc.edu/16SguildDB/">16Sguild database</a> assigning UUIDs to ASVs</td>
+<td>Filtering (s12)</td>
+<td>Database</td>
+<td>Pipeline Feature</td>
+</tr>
+<tr>
+<td><code>/main_results/s14_alpha-rarefaction.qzv</code></td>
+<td>QIIME2 visualization of alpha rarefaction</td>
+<td>Alpha rarefaction (s14)</td>
+<td>QIIME2</td>
+<td><a href="https://docs.qiime2.org/2024.10/plugins/available/diversity/index.html">Alpha rarefaction</a></td>
+</tr>
+<tr>
+<td><code>/main_results/s17_formatTable</code></td>
+<td>filtered ASV table</td>
+<td>Filtering (s17)</td>
+<td>16Sguild</td>
+<td>Pipeline Feature</td>
+</tr>
+<tr>
+<td><code>/main_results/s20_CAG</code></td>
+<td>tables and graphs for CAG results</td>
+<td>Plot CAG (s20)</td>
+<td>16Sguild</td>
+<td>Pipeline Feature</td>
+</tr>
+<tr>
+<td><code>/intermediate_results/s1</code></td>
+<td>import sequencing files into a QIIME 2 artifact (.qza file)</td>
+<td>Import (s1)</td>
+<td>QIIME2</td>
+<td><a href="https://docs.qiime2.org/2024.10/tutorials/importing/">Importing data</a></td>
+</tr>
+<tr>
+<td><code>/intermediate_results/s2</code></td>
+<td>QIIME2 artifact (.qza) summarizing the quality and distribution of the raw sequencing data after trimming</td>
+<td>Quality Check (s2)</td>
+<td>QIIME2</td>
+<td><a href="https://docs.qiime2.org/2024.10/plugins/available/demux/summarize/">Demux Summarize</a></td>
+</tr>
+<tr>
+<td><code>/intermediate_results/FASTQC</code></td>
+<td>folder containing the FASTQC files for the raw samples</td>
+<td>FASTQC (s0)</td>
+<td>FASTQC</td>
+<td><a href="https://nf-co.re/modules/fastqc/">FASTQC</a></td>
+</tr>
+<tr>
+<td><code>/intermediate_results/FASTQC_trimmed</code></td>
+<td>folder containing the FASTQC files for the trimmed samples</td>
+<td>FASTQC (s0)</td>
+<td>FASTQC</td>
+<td><a href="https://nf-co.re/modules/fastqc/">FASTQC</a></td>
+</tr>
+<tr>
+<td><code>/intermediate_results/s5</code></td>
+<td></td>
+<td>Quality filtering (s5)</td>
+<td>QIIME2 (DADA2)</td>
+<td><a href="https://amplicon-docs.qiime2.org/en/stable/references/plugins/dada2.html#q2-action-dada2-denoise-paired">DADA2</a></td>
+</tr>
+<tr>
+<td><code>/intermediate_results/s6_{base_name}_group#_denoising-stats.qzv</code></td>
+<td></td>
+<td>Denoise (s5)</td>
+<td>16Sguild</td>
+<td>Pipeline Feature</td>
+</tr>
+<tr>
+<td><code>/intermediate_results/s9</code></td>
+<td>converts QIIME2 artifact into FASTA file</td>
+<td>Filtering (s12)</td>
+<td>16Sguild</td>
+<td>Pipeline Feature</td>
+</tr>
+<tr>
+<td><code>/intermediate_results/s10</code></td>
+<td></td>
+<td>Quality filtering (s10)</td>
+<td>16Sguild</td>
+<td>Pipeline Feature</td>
+</tr>
+<tr>
+<td><code>/intermediate_results/s11b</code></td>
+<td>UUID and txt files for database</td>
+<td>Filtering (s12)</td>
+<td>Database</td>
+<td>Pipeline Feature</td>
+</tr>
+<tr>
+<td><code>/intermediate_results/s12</code></td>
+<td>Prepare both sequences and feature table into proper QIIME-compatible artifacts</td>
+<td>QIIME2 Import (s12)</td>
+<td>QIIME2</td>
+<td>Pipeline Feature</td>
+</tr>
+<tr>
+<td><code>/intermediate_results/s13</code></td>
+<td>This set of steps produces a rooted phylogenetic tree (.qza) by aligning representative sequences, filtering the alignment, building an unrooted tree, and then applying midpoint rooting.</td>
+<td>(s13)</td>
+<td>QIIME2</td>
+<td>Pipeline Feature</td>
+</tr>
+<tr>
+<td><code>/intermediate_results/alphaBetaDiversity</code></td>
+<td>QIIME2 visualization of beta diversity plots</td>
+<td>Diversity analysis (s15)</td>
+<td>QIIME2</td>
+<td><a href="https://docs.qiime2.org/2024.10/plugins/available/diversity/index.html">Diversity</a></td>
+</tr>
+<tr>
+<td><code>/intermediate_results/s15</code></td>
+<td></td>
+<td>Diversity analysis (s15)</td>
+<td>QIIME2</td>
+<td><a href="https://docs.qiime2.org/2024.10/plugins/available/diversity/index.html">Diversity</a></td>
+</tr>
+<tr>
+<td><code>/intermediate_results/s16</code></td>
+<td>exporting results</td>
+<td>Export (s16)</td>
+<td>16Sguild</td>
+<td>Pipeline Feature</td>
+</tr>
+<tr>
+<td><code>/intermediate_results/s19</code></td>
+<td>correlation analysis results</td>
+<td>Correlation analysis (s19)</td>
+<td>FastSpar</td>
+<td><a href="https://github.com/scwatts/fastspar">FastSpar</a></td>
+</tr>
+</tbody>
+</table>
 
 
 
