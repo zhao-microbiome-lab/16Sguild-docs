@@ -36,7 +36,7 @@ nextflow run main.nf -params-file examples/params.yml
 
 Detailed usage examples can be found in the [Basic Workflow documentation](basic-workflow.md).
 
-> **Note:** The pipeline requires [Nextflow](https://www.nextflow.io/) (version 24.04.0 or later) and either [Docker](https://docs.docker.com/get-docker/) or [Singularity/Apptainer](https://apptainer.org/).
+> **Note:** The pipeline requires [Nextflow](https://www.nextflow.io/) (version 25.04 through 26.04) and either [Docker](https://docs.docker.com/get-docker/) or [Singularity/Apptainer](https://apptainer.org/). See the [Installation guide](installation.md) for details.
 
 ---
 
