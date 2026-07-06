@@ -1035,6 +1035,11 @@ Sample2,/files/Sample2_2.fastq,reverse
 <span class="nl">subject_column:</span><span class="w"> </span><span class="s2">&quot;subject&quot;</span>
 </code></pre></div>
 <p>Please note that the NYU example data is not correlated.</p>
+<details class="info">
+<summary>Note about Correlation</summary>
+<p>The sampling depth found in the alpha rarefaction step may remove samples from a certain patient because they don't meet the required sampling depth. If there is only one sample left from a particular patient, the pipeline will temporarily remove that sample because there are not enough samples to do a correlation analysis. The pipeline will create a table that lists what samples/patients are dropped. The samples that meet the sampling depth requirement will be added back to the analysis after the correlation step.</p>
+<p>For example, there is a patient with three samples. Two of the samples do not meet the required sampling depth, so they are removed by alpha rarefaction. The remaining sample will be temporarily removed by <code>rmcorr&lt;\code&gt;. The one sample will be added back to the analysis after the correlation step is completed.</p>
+</details>
 <hr />
 <h2 id="parts">Parts</h2>
 <p>The pipeline has set parts. The pipeline will run automatically through a part and stop itself once it reaches the end of the part. At the end of the part, users will need to examine their data and update their parameter file accordingly to continue with their analysis.</p>
