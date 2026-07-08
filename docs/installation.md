@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="assets/16Sguild_long.png" alt="16S Guild Long" width="450"/>
+    <img src="../assets/16Sguild_long.png" alt="16S Guild Long" width="450"/>
 </div>
 
 # Installation
@@ -8,7 +8,7 @@ Installation guide for guild-based analysis of 16S-rRNA sequencing data based on
 
 <div align="center">
   <a href="https://biostats-shinyr.kumc.edu/16SguildDB/">
-    <img src="assets/16SguildDatabaseButton.PNG" alt="16S Guild Database" width="200"/>
+    <img src="../assets/16SguildDatabaseButton.PNG" alt="16S Guild Database" width="200"/>
   </a>
 </div>
 

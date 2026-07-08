@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="../assets/16Sguild_long.png" alt="16S Guild Long" width="300"/>
+    <img src="../assets/16Sguild_long.png" alt="16S Guild Long" width="450"/>
 </div>
 
 # Change Log
