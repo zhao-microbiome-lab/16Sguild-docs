@@ -48,7 +48,7 @@ In this vignette, we walk through how to run the pipeline step by step. Users ca
 To install `16Sguild`, users can directly call the pipeline using Nextflow from GitHub:
 
 ```bash
-nextflow run zhao-microbiome-lab/16Sguild/main.nf -params-file examples/params.yml -profile test
+nextflow run zhao-microbiome-lab/16Sguild -params-file examples/params.yml -profile test
 ```
 
 Or, users can choose to download and run from the source file:
@@ -268,7 +268,7 @@ max: "23700"
 The user can now resume the pipeline:
 
 ```bash
-nextflow run zhao-microbiome-lab/16Sguild/main.nf -params-file examples/params.yml -profile test -resume
+nextflow run zhao-microbiome-lab/16Sguild -params-file examples/params.yml -profile test -resume
 ```
 
 ??? nextflow "Nextflow: resuming and caching"
