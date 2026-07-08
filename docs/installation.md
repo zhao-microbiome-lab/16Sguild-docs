@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="../assets/16Sguild_long.png" alt="16S Guild Long" width="450"/>
+    <img src="assets/16Sguild_long.png" alt="16S Guild Long" width="450"/>
 </div>
 
 # Installation
@@ -8,7 +8,7 @@ Installation guide for guild-based analysis of 16S-rRNA sequencing data based on
 
 <div align="center">
   <a href="https://biostats-shinyr.kumc.edu/16SguildDB/">
-    <img src="../assets/16SguildDatabaseButton.PNG" alt="16S Guild Database" width="200"/>
+    <img src="assets/16SguildDatabaseButton.PNG" alt="16S Guild Database" width="200"/>
   </a>
 </div>
 
@@ -39,7 +39,7 @@ When launching the pipeline, tell Nextflow which container engine to use with th
 Run directly from GitHub (suggested):
 
 ```bash
-nextflow run zhao-microbiome-lab/16Sguild/main.nf -params-file examples/params.yml -profile docker
+nextflow run zhao-microbiome-lab/16Sguild -params-file examples/params.yml -profile docker
 ```
 
 Or, clone the repository and launch the pipeline:
@@ -62,7 +62,7 @@ docker --version   # or: singularity --version / apptainer --version
 Then do a quick end-to-end run against the bundled test dataset:
 
 ```bash
-nextflow run zhao-microbiome-lab/16Sguild/main.nf -profile test,docker
+nextflow run zhao-microbiome-lab/16Sguild -profile test,docker
 ```
 
 The `test` profile runs a minimal dataset and completing without errors confirms your Nextflow and container setup are working correctly.
