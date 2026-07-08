@@ -483,25 +483,25 @@
 <td>QIIME2 visualization summarizing the quality and distribution of the raw sequencing data before trimming</td>
 <td>Quality Check (s2)</td>
 <td>QIIME2</td>
-<td><a href="https://docs.qiime2.org/2024.10/plugins/available/demux/summarize/">Demux Summarize</a></td>
+<td><a href="https://docs.qiime2.org/2024.10/plugins/available/demux/summarize/">Demux Summarize</a> \ <a href="https://view.qiime2.org/">QIIME2 View</a></td>
 </tr>
 <tr>
 <td><code>/main_results/s3_{base_name}_trimmed.qzv</code></td>
 <td>QIIME2 visualization (.qzv) summarizing the quality and distribution of the raw sequencing data after trimming</td>
 <td>Trimming (s3)</td>
 <td>QIIME2 (cutadapt)</td>
-<td><a href="https://docs.qiime2.org/2024.10/plugins/available/cutadapt/trim-paired/">Trimming</a></td>
+<td><a href="https://docs.qiime2.org/2024.10/plugins/available/cutadapt/trim-paired/">Trimming</a> \ <a href="https://view.qiime2.org/">QIIME2 View</a></td>
 </tr>
 <tr>
 <td><code>/main_results/MULTIQC</code></td>
-<td>foldering containing the MultiQC file for all raw samples pooled together.</td>
+<td>Folder containing the MultiQC file for all raw samples together.</td>
 <td>MultiQC (s0)</td>
 <td>MultiQC</td>
 <td><a href="https://nf-co.re/modules/multiqc/">MultiQC</a></td>
 </tr>
 <tr>
 <td><code>/main_results/MULTIQC_trimmed</code></td>
-<td>foldering containing the MultiQC file for all trimmed samples pooled together.</td>
+<td>Folder containing the MultiQC file for all trimmed samples together.</td>
 <td>MultiQC (s0)</td>
 <td>MultiQC</td>
 <td><a href="https://nf-co.re/modules/multiqc/">MultiQC</a></td>
@@ -511,14 +511,14 @@
 <td>QIIME2 visualization of feature table summary of denoising statistics</td>
 <td>Denoise (s5)</td>
 <td>16Sguild</td>
-<td>Pipeline Feature</td>
+<td><a href="https://view.qiime2.org/">QIIME2 View</a></td>
 </tr>
 <tr>
 <td><code>/main_results/s11a_database</code></td>
 <td><code>rds</code> file for <a href="https://biostats-shinyr.kumc.edu/16SguildDB/">16Sguild database</a> assigning UUIDs to ASVs</td>
 <td>Filtering (s12)</td>
 <td>Database</td>
-<td>Pipeline Feature</td>
+<td><a href="https://biostats-shinyr.kumc.edu/16SguildDB/">Pipeline Feature</a></td>
 </tr>
 <tr>
 <td><code>/main_results/s14_alpha-rarefaction.qzv</code></td>
@@ -532,7 +532,7 @@
 <td>filtered ASV table</td>
 <td>Filtering (s17)</td>
 <td>16Sguild</td>
-<td>Pipeline Feature</td>
+<td><a href="https://biostats-shinyr.kumc.edu/16SguildDB/">Pipeline Feature</a></td>
 </tr>
 <tr>
 <td><code>/main_results/s20_CAG</code></td>
@@ -557,31 +557,31 @@
 </tr>
 <tr>
 <td><code>/intermediate_results/FASTQC</code></td>
-<td>folder containing the FASTQC files for the raw samples</td>
+<td>Folder containing the FASTQC files for the raw samples</td>
 <td>FASTQC (s0)</td>
 <td>FASTQC</td>
 <td><a href="https://nf-co.re/modules/fastqc/">FASTQC</a></td>
 </tr>
 <tr>
 <td><code>/intermediate_results/FASTQC_trimmed</code></td>
-<td>folder containing the FASTQC files for the trimmed samples</td>
+<td>Folder containing the FASTQC files for the trimmed samples</td>
 <td>FASTQC (s0)</td>
 <td>FASTQC</td>
 <td><a href="https://nf-co.re/modules/fastqc/">FASTQC</a></td>
 </tr>
 <tr>
 <td><code>/intermediate_results/s5</code></td>
-<td></td>
+<td>QIIME2 artifact after completing DADA2 denoising. Visualized in s6 object</td>
 <td>Quality filtering (s5)</td>
 <td>QIIME2 (DADA2)</td>
 <td><a href="https://amplicon-docs.qiime2.org/en/stable/references/plugins/dada2.html#q2-action-dada2-denoise-paired">DADA2</a></td>
 </tr>
 <tr>
 <td><code>/intermediate_results/s6_{base_name}_group#_denoising-stats.qzv</code></td>
-<td></td>
+<td>Visualization of the denoising results using DADA2</td>
 <td>Denoise (s5)</td>
 <td>16Sguild</td>
-<td>Pipeline Feature</td>
+<td><a href="https://docs.qiime2.org/jupyterbooks/cancer-microbiome-intervention-tutorial/020-tutorial-upstream/040-denoising.html">DADA2 denoising with QIIME2</a> \ <a href="https://view.qiime2.org/">QIIME2 View</a></td>
 </tr>
 <tr>
 <td><code>/intermediate_results/s9</code></td>
@@ -602,7 +602,7 @@
 <td>UUID and txt files for database</td>
 <td>Filtering (s12)</td>
 <td>Database</td>
-<td>Pipeline Feature</td>
+<td><a href="https://biostats-shinyr.kumc.edu/16SguildDB/">Pipeline Feature</a></td>
 </tr>
 <tr>
 <td><code>/intermediate_results/s12</code></td>
@@ -616,7 +616,7 @@
 <td>This set of steps produces a rooted phylogenetic tree (.qza) by aligning representative sequences, filtering the alignment, building an unrooted tree, and then applying midpoint rooting.</td>
 <td>(s13)</td>
 <td>QIIME2</td>
-<td>Pipeline Feature</td>
+<td><a href="https://docs.qiime2.org/jupyterbooks/cancer-microbiome-intervention-tutorial/030-tutorial-downstream/030-phylogeny.html">QIIME2 phylogenetic tree construction</a></td>
 </tr>
 <tr>
 <td><code>/intermediate_results/alphaBetaDiversity</code></td>
