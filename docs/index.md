@@ -23,7 +23,7 @@ A Nextflow workflow for guild-based 16S-rRNA sequencing analysis such as introdu
 Run directly from GitHub (suggested):
 
 ```bash
-nextflow run zhao-microbiome-lab/16Sguild/main.nf -params-file examples/params.yml
+nextflow run zhao-microbiome-lab/16Sguild -params-file examples/params.yml
 ```
 
 Or, clone the repository and launch the pipeline:
