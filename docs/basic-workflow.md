@@ -216,7 +216,7 @@ Please note that the NYU example data is not correlated.
 
     The sampling depth found in the alpha rarefaction step may remove samples from a certain patient because they don't meet the required sampling depth. If there is only one sample left from a particular patient, the pipeline will temporarily remove that sample because there are not enough samples to do a correlation analysis. The pipeline will create a table that lists what samples/patients are dropped. The samples that meet the sampling depth requirement will be added back to the analysis after the correlation step.
     
-    For example, there is a patient with three samples. Two of the samples do not meet the required sampling depth, so they are removed by alpha rarefaction. The remaining sample will be temporarily removed by <code>rmcorr</code>. The one sample will be added back to the analysis after the correlation step is completed.
+    For example, there is a patient with three samples. Two of the samples do not meet the required sampling depth, so they are removed by alpha rarefaction. The remaining sample will be temporarily removed by <code>rmcorr</code>. The sample cannot be used if it is the only one for correlation analysis.
 
 ---
 
