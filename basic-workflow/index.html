@@ -1071,7 +1071,7 @@ Sample2,/files/Sample2_2.fastq,reverse
 <details class="info">
 <summary>Note about Correlation</summary>
 <p>The sampling depth found in the alpha rarefaction step may remove samples from a certain patient because they don't meet the required sampling depth. If there is only one sample left from a particular patient, the pipeline will temporarily remove that sample because there are not enough samples to do a correlation analysis. The pipeline will create a table that lists what samples/patients are dropped. The samples that meet the sampling depth requirement will be added back to the analysis after the correlation step.</p>
-<p>For example, there is a patient with three samples. Two of the samples do not meet the required sampling depth, so they are removed by alpha rarefaction. The remaining sample will be temporarily removed by <code>rmcorr&lt;\code&gt;. The one sample will be added back to the analysis after the correlation step is completed.</p>
+<p>For example, there is a patient with three samples. Two of the samples do not meet the required sampling depth, so they are removed by alpha rarefaction. The remaining sample will be temporarily removed by <code>rmcorr</code>. The one sample will be added back to the analysis after the correlation step is completed.</p>
 </details>
 <hr />
 <h2 id="parts">Parts</h2>
