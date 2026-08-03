@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/16Sguild_favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -395,10 +395,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#manifest" class="md-nav__link">
+  <a href="#samplesheet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Manifest
+        samplesheet
       
     </span>
   </a>
@@ -703,10 +703,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#manifest" class="md-nav__link">
+  <a href="#samplesheet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Manifest
+        samplesheet
       
     </span>
   </a>
@@ -897,21 +897,21 @@ nextflow<span class="w"> </span>run<span class="w"> </span>main.nf<span class="w
 <h2 id="example-data">Example Data</h2>
 <p>Download Required Example Data Files</p>
 <p><a href="https://biostats-shinyr.kumc.edu/16SguildDB_ExampleData/NYU_Example_FASTQ_Files.zip"><img alt="Download NYU example samples" src="https://img.shields.io/badge/Download-NYU_example_samples-840024" /></a></p>
-<p><a href="../test/manifest.csv"><img alt="Download manifest example" src="https://img.shields.io/badge/Download-manifest_example-840024" /></a></p>
+<p><a href="../test/manifest.csv"><img alt="Download samplesheet example" src="https://img.shields.io/badge/Download-manifest_example-840024" /></a></p>
 <p><a href="../test/metadata.txt"><img alt="Download metadata example" src="https://img.shields.io/badge/Download-metadata_example-840024" /></a></p>
 <hr />
 <h2 id="input-files">Input Files</h2>
 <p>Users are required to have certain input files to run the 16Sguild pipeline:</p>
 <ul>
-<li>Manifest</li>
+<li>samplesheet</li>
 <li>Metadata</li>
 <li>Parameters</li>
 </ul>
-<h3 id="manifest">Manifest</h3>
-<p>First, users set up their manifest file. This file contains the sample-id, absolute file path, and direction.</p>
+<h3 id="samplesheet">samplesheet</h3>
+<p>First, users set up their samplesheet file. This file contains the sample-id, absolute file path, and direction.</p>
 <details class="info">
-<summary>Manifest</summary>
-<p>The manifest represents two paired-end samples in FASTQ format, each consisting of forward and reverse reads, organized according to QIIME2's manifest specification: <a href="https://docs.qiime2.org/2024.10/tutorials/importing/"><code>qiime tools import</code></a>.</p>
+<summary>samplesheet</summary>
+<p>The samplesheet represents two paired-end samples in FASTQ format, each consisting of forward and reverse reads, organized according to QIIME2's samplesheet specification: <a href="https://docs.qiime2.org/2024.10/tutorials/importing/"><code>qiime tools import</code></a>.</p>
 <p>Below is an example of what the file would look like for 2 samples:</p>
 <p><strong><code>input/manifest.csv</code></strong></p>
 <div class="highlight"><pre><span></span><code>sample-id,absolute-filepath,direction
@@ -997,7 +997,7 @@ Sample2,/files/Sample2_2.fastq,reverse
 <p>In order to use <code>16Sguild</code>, users need to create a project-specific parameters file, usually named <code>params.yml</code>. Detailed definitions for each parameter are included on the <a href="../parameters/">parameters page</a>.</p>
 <details class="param">
 <summary>samplesheet</summary>
-<p>The <code>samplesheet</code> points to the <code>manifest</code> CSV file. This manifest file is in the format expected for the <a href="https://docs.qiime2.org/2024.10/tutorials/importing/"><code>qiime tools import</code></a> function.</p>
+<p>The <code>samplesheet</code> points to the <code>manifest</code> CSV file. This samplesheet file is in the format expected for the <a href="https://docs.qiime2.org/2024.10/tutorials/importing/"><code>qiime tools import</code></a> function.</p>
 </details>
 <details class="param">
 <summary>metadata</summary>
@@ -1013,7 +1013,7 @@ Sample2,/files/Sample2_2.fastq,reverse
 </details>
 <details class="param">
 <summary>input_format</summary>
-<p>The <code>input_format</code> refers to the type of fastq manifest file. Common types include:</p>
+<p>The <code>input_format</code> refers to the type of fastq samplesheet file. Common types include:</p>
 <ul>
 <li><code>"PairedEndFastqManifestPhred33"</code></li>
 <li><code>"PairedEndFastqManifestPhred64"</code></li>
@@ -1263,7 +1263,7 @@ linkage_table:<span class="w"> </span>/input/ASV_linkage_table_date.txt
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       
