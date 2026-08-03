@@ -77,7 +77,7 @@ Download Required Example Data Files
 
 [![Download NYU example samples](https://img.shields.io/badge/Download-NYU_example_samples-840024)](https://biostats-shinyr.kumc.edu/16SguildDB_ExampleData/NYU_Example_FASTQ_Files.zip)
 
-[![Download manifest example](https://img.shields.io/badge/Download-manifest_example-840024)](test/manifest.csv)
+[![Download samplesheet example](https://img.shields.io/badge/Download-manifest_example-840024)](test/manifest.csv)
 
 [![Download metadata example](https://img.shields.io/badge/Download-metadata_example-840024)](test/metadata.txt)
 
@@ -87,17 +87,17 @@ Download Required Example Data Files
 
 Users are required to have certain input files to run the 16Sguild pipeline:
 
-- Manifest
+- samplesheet
 - Metadata
 - Parameters
 
-### Manifest
+### samplesheet
 
-First, users set up their manifest file. This file contains the sample-id, absolute file path, and direction.
+First, users set up their samplesheet file. This file contains the sample-id, absolute file path, and direction.
 
-??? info "Manifest"
+??? info "samplesheet"
 
-    The manifest represents two paired-end samples in FASTQ format, each consisting of forward and reverse reads, organized according to QIIME2's manifest specification: [`qiime tools import`](https://docs.qiime2.org/2024.10/tutorials/importing/).
+    The samplesheet represents two paired-end samples in FASTQ format, each consisting of forward and reverse reads, organized according to QIIME2's samplesheet specification: [`qiime tools import`](https://docs.qiime2.org/2024.10/tutorials/importing/).
 
     Below is an example of what the file would look like for 2 samples:
 
@@ -153,7 +153,7 @@ In order to use `16Sguild`, users need to create a project-specific parameters f
 
 ??? param "samplesheet"
 
-    The `samplesheet` points to the `manifest` CSV file. This manifest file is in the format expected for the [`qiime tools import`](https://docs.qiime2.org/2024.10/tutorials/importing/) function.
+    The `samplesheet` points to the `manifest` CSV file. This samplesheet file is in the format expected for the [`qiime tools import`](https://docs.qiime2.org/2024.10/tutorials/importing/) function.
 
 ??? param "metadata"
 
@@ -169,7 +169,7 @@ In order to use `16Sguild`, users need to create a project-specific parameters f
 
 ??? param "input_format"
 
-    The `input_format` refers to the type of fastq manifest file. Common types include:
+    The `input_format` refers to the type of fastq samplesheet file. Common types include:
 
     - `"PairedEndFastqManifestPhred33"`
     - `"PairedEndFastqManifestPhred64"`
