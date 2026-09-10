@@ -986,13 +986,13 @@ Sample2,/files/Sample2_2.fastq,reverse
 </details>
 <h3 id="parameters">Parameters</h3>
 <p>The parameters file contains project-specific information required to run the pipeline. Here are the initial parameters:</p>
-<div class="highlight"><pre><span></span><code><span class="nl">samplesheet:</span><span class="w"> </span><span class="s2">&quot;manifest.csv&quot;</span>
-<span class="nl">metadata:</span><span class="w"> </span><span class="s2">&quot;metadata.txt&quot;</span>
-<span class="nl">base_name:</span><span class="w"> </span><span class="s2">&quot;16sguild_Example&quot;</span>
-<span class="nl">input_type:</span><span class="w"> </span><span class="s2">&quot;SampleData[PairedEndSequencesWithQuality]&quot;</span>
-<span class="nl">input_format:</span><span class="w"> </span><span class="s2">&quot;PairedEndFastqManifestPhred33&quot;</span>
-<span class="nl">trim_forward:</span><span class="w"> </span><span class="s2">&quot;GTGCCAGCMGCCGCGGTAA&quot;</span>
-<span class="nl">trim_reverse:</span><span class="w"> </span><span class="s2">&quot;GGACTACHVGGGTWTCTAAT&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nl">samplesheet:</span><span class="w"> </span><span class="s2">"manifest.csv"</span>
+<span class="nl">metadata:</span><span class="w"> </span><span class="s2">"metadata.txt"</span>
+<span class="nl">base_name:</span><span class="w"> </span><span class="s2">"16sguild_Example"</span>
+<span class="nl">input_type:</span><span class="w"> </span><span class="s2">"SampleData[PairedEndSequencesWithQuality]"</span>
+<span class="nl">input_format:</span><span class="w"> </span><span class="s2">"PairedEndFastqManifestPhred33"</span>
+<span class="nl">trim_forward:</span><span class="w"> </span><span class="s2">"GTGCCAGCMGCCGCGGTAA"</span>
+<span class="nl">trim_reverse:</span><span class="w"> </span><span class="s2">"GGACTACHVGGGTWTCTAAT"</span>
 </code></pre></div>
 <p>In order to use <code>16Sguild</code>, users need to create a project-specific parameters file, usually named <code>params.yml</code>. Detailed definitions for each parameter are included on the <a href="../parameters/">parameters page</a>.</p>
 <details class="param">
@@ -1058,14 +1058,14 @@ Sample2,/files/Sample2_2.fastq,reverse
 <p>Here is an example <code>params.yml</code> file with the correlation:</p>
 <div class="highlight"><pre><span></span><code><span class="nl">s19_rmcorr:</span><span class="w"> </span><span class="kc">true</span>
 
-<span class="nl">samplesheet:</span><span class="w"> </span><span class="s2">&quot;manifest.csv&quot;</span>
-<span class="nl">metadata:</span><span class="w"> </span><span class="s2">&quot;metadata.txt&quot;</span>
-<span class="nl">base_name:</span><span class="w"> </span><span class="s2">&quot;16sguild_Example&quot;</span>
-<span class="nl">input_type:</span><span class="w"> </span><span class="s2">&quot;SampleData[PairedEndSequencesWithQuality]&quot;</span>
-<span class="nl">input_format:</span><span class="w"> </span><span class="s2">&quot;PairedEndFastqManifestPhred33&quot;</span>
-<span class="nl">trim_forward:</span><span class="w"> </span><span class="s2">&quot;GTGCCAGCMGCCGCGGTAA&quot;</span>
-<span class="nl">trim_reverse:</span><span class="w"> </span><span class="s2">&quot;GGACTACHVGGGTWTCTAAT&quot;</span>
-<span class="nl">subject_column:</span><span class="w"> </span><span class="s2">&quot;subject&quot;</span>
+<span class="nl">samplesheet:</span><span class="w"> </span><span class="s2">"manifest.csv"</span>
+<span class="nl">metadata:</span><span class="w"> </span><span class="s2">"metadata.txt"</span>
+<span class="nl">base_name:</span><span class="w"> </span><span class="s2">"16sguild_Example"</span>
+<span class="nl">input_type:</span><span class="w"> </span><span class="s2">"SampleData[PairedEndSequencesWithQuality]"</span>
+<span class="nl">input_format:</span><span class="w"> </span><span class="s2">"PairedEndFastqManifestPhred33"</span>
+<span class="nl">trim_forward:</span><span class="w"> </span><span class="s2">"GTGCCAGCMGCCGCGGTAA"</span>
+<span class="nl">trim_reverse:</span><span class="w"> </span><span class="s2">"GGACTACHVGGGTWTCTAAT"</span>
+<span class="nl">subject_column:</span><span class="w"> </span><span class="s2">"subject"</span>
 </code></pre></div>
 <p>Please note that the NYU example data is not correlated.</p>
 <details class="info">
@@ -1079,36 +1079,36 @@ Sample2,/files/Sample2_2.fastq,reverse
 <p><img alt="Workflow" src="../assets/16Sguild_metroMap.png" /></p>
 <p><em>Basic workflow overview of 16Sguild pipeline.</em></p>
 <h3 id="part-1">Part 1</h3>
-<p>Part 1 is involved with importing the FASTQ files, trimming the primer sequences, and QCing the samples.</p>
+<p>Part 1 is involved with importing the FASTQ files, trimming the primer sequences, and QCing the samples. This part takes approximately 10 minutes with 8 CPUs and 32 GB of memory allocated to each job.</p>
 <p>At the end of Part 1, the pipeline will automatically stop and say "<strong>Pipeline Paused: End of Part 1</strong>". Users will need to select trimming lengths for truncation and the maximum value for filtering unreliable sequences.</p>
 <p>First, navigate to the results folder and under the visualization output, open <code>input_trimmed.qzv</code>. This file needs to be downloaded and viewed using the <a href="https://view.qiime2.org/">QIIME2 Viewer</a>. Navigate to the "Interactive Quality Plot" tab and examine the quality plots:</p>
 <p><img alt="Quality plots" src="../assets/quality_plot.png" /></p>
 <p>Zooming in on the graphs shows that the quality scores stay above 30 until the end of the reads. Therefore, the sequences do not need to be truncated for our example data. Users will now add to their parameters files to reflect this:</p>
-<div class="highlight"><pre><span></span><code>samplesheet:<span class="w"> </span><span class="s2">&quot;manifest.csv&quot;</span>
-metadata:<span class="w"> </span><span class="s2">&quot;metadata.txt&quot;</span>
-base_name:<span class="w"> </span><span class="s2">&quot;16sguild_Example&quot;</span>
-input_type:<span class="w"> </span><span class="s2">&quot;SampleData[PairedEndSequencesWithQuality]&quot;</span>
-input_format:<span class="w"> </span><span class="s2">&quot;PairedEndFastqManifestPhred33&quot;</span>
-trim_forward:<span class="w"> </span><span class="s2">&quot;GTGCCAGCMGCCGCGGTAA&quot;</span>
-trim_reverse:<span class="w"> </span><span class="s2">&quot;GGACTACHVGGGTWTCTAAT&quot;</span>
+<div class="highlight"><pre><span></span><code>samplesheet:<span class="w"> </span><span class="s2">"manifest.csv"</span>
+metadata:<span class="w"> </span><span class="s2">"metadata.txt"</span>
+base_name:<span class="w"> </span><span class="s2">"16sguild_Example"</span>
+input_type:<span class="w"> </span><span class="s2">"SampleData[PairedEndSequencesWithQuality]"</span>
+input_format:<span class="w"> </span><span class="s2">"PairedEndFastqManifestPhred33"</span>
+trim_forward:<span class="w"> </span><span class="s2">"GTGCCAGCMGCCGCGGTAA"</span>
+trim_reverse:<span class="w"> </span><span class="s2">"GGACTACHVGGGTWTCTAAT"</span>
 
 <span class="c1"># End of Part 1</span>
-trunc_forward:<span class="w"> </span><span class="s2">&quot;0&quot;</span>
-trunc_reverse:<span class="w"> </span><span class="s2">&quot;0&quot;</span>
+trunc_forward:<span class="w"> </span><span class="s2">"0"</span>
+trunc_reverse:<span class="w"> </span><span class="s2">"0"</span>
 </code></pre></div>
 <p>Next, select the maximum value for filtering unreliable sequences. The file can be found at <code>results/visualization/s7_input.qzv</code>. Load the <code>.qzv</code> file into the <a href="https://view.qiime2.org/">QIIME2 Viewer</a>. The maximum is suggested to be set to median frequency, rounded up or down to the nearest hundred. Update the params file:</p>
-<div class="highlight"><pre><span></span><code>samplesheet:<span class="w"> </span><span class="s2">&quot;manifest.csv&quot;</span>
-metadata:<span class="w"> </span><span class="s2">&quot;metadata.txt&quot;</span>
-base_name:<span class="w"> </span><span class="s2">&quot;16sguild_Example&quot;</span>
-input_type:<span class="w"> </span><span class="s2">&quot;SampleData[PairedEndSequencesWithQuality]&quot;</span>
-input_format:<span class="w"> </span><span class="s2">&quot;PairedEndFastqManifestPhred33&quot;</span>
-trim_forward:<span class="w"> </span><span class="s2">&quot;GTGCCAGCMGCCGCGGTAA&quot;</span>
-trim_reverse:<span class="w"> </span><span class="s2">&quot;GGACTACHVGGGTWTCTAAT&quot;</span>
+<div class="highlight"><pre><span></span><code>samplesheet:<span class="w"> </span><span class="s2">"manifest.csv"</span>
+metadata:<span class="w"> </span><span class="s2">"metadata.txt"</span>
+base_name:<span class="w"> </span><span class="s2">"16sguild_Example"</span>
+input_type:<span class="w"> </span><span class="s2">"SampleData[PairedEndSequencesWithQuality]"</span>
+input_format:<span class="w"> </span><span class="s2">"PairedEndFastqManifestPhred33"</span>
+trim_forward:<span class="w"> </span><span class="s2">"GTGCCAGCMGCCGCGGTAA"</span>
+trim_reverse:<span class="w"> </span><span class="s2">"GGACTACHVGGGTWTCTAAT"</span>
 
 <span class="c1"># End of Part 1</span>
-trunc_forward:<span class="w"> </span><span class="s2">&quot;0&quot;</span>
-trunc_reverse:<span class="w"> </span><span class="s2">&quot;0&quot;</span>
-max:<span class="w"> </span><span class="s2">&quot;23700&quot;</span>
+trunc_forward:<span class="w"> </span><span class="s2">"0"</span>
+trunc_reverse:<span class="w"> </span><span class="s2">"0"</span>
+max:<span class="w"> </span><span class="s2">"23700"</span>
 </code></pre></div>
 <p>The user can now resume the pipeline:</p>
 <div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>zhao-microbiome-lab/16Sguild<span class="w"> </span>-params-file<span class="w"> </span>examples/params.yml<span class="w"> </span>-profile<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-resume
@@ -1137,7 +1137,7 @@ min:<span class="w"> </span><span class="c1"># optional, default 100</span>
 </code></pre></div>
 </details>
 <h3 id="part-2">Part 2</h3>
-<p>Part 2 is involved with denoising and quality filtering. It also generates a table of the ASVs contained in the sample.</p>
+<p>Part 2 is involved with denoising and quality filtering. It also generates a table of the ASVs contained in the sample. This part takes approximately 13 minutes with 8 CPUs and 32 GB of memory allocated to each job.</p>
 <p>During Part 2, take the table of ASVs — an RDS file found at <code>results/main_results/s11a_database/input_bundle.rds</code>. Download this file and upload it to the database website:</p>
 <div align="center">
   <a href="https://biostats-shinyr.kumc.edu/16SguildDB/">
@@ -1146,46 +1146,46 @@ min:<span class="w"> </span><span class="c1"># optional, default 100</span>
 </div>
 
 <p>Users need to fill out the database questionnaire with clear contact details, while being as specific as possible. Selecting the sequencing platform and 16S rRNA region are also required. Acknowledge that you understand contributing to the database and then run the filtering and download the linkage table. For the NYU example dataset, simply click the box saying it is the example dataset and fill out your contact details. The database will generate a linkage table to assign UUIDs to the ASVs. Put the linkage table in your run folder and update the <code>params.yml</code> file with its absolute file path:</p>
-<div class="highlight"><pre><span></span><code>samplesheet:<span class="w"> </span><span class="s2">&quot;manifest.csv&quot;</span>
-metadata:<span class="w"> </span><span class="s2">&quot;metadata.txt&quot;</span>
-base_name:<span class="w"> </span><span class="s2">&quot;16sguild_Example&quot;</span>
-input_type:<span class="w"> </span><span class="s2">&quot;SampleData[PairedEndSequencesWithQuality]&quot;</span>
-input_format:<span class="w"> </span><span class="s2">&quot;PairedEndFastqManifestPhred33&quot;</span>
-trim_forward:<span class="w"> </span><span class="s2">&quot;GTGCCAGCMGCCGCGGTAA&quot;</span>
-trim_reverse:<span class="w"> </span><span class="s2">&quot;GGACTACHVGGGTWTCTAAT&quot;</span>
+<div class="highlight"><pre><span></span><code>samplesheet:<span class="w"> </span><span class="s2">"manifest.csv"</span>
+metadata:<span class="w"> </span><span class="s2">"metadata.txt"</span>
+base_name:<span class="w"> </span><span class="s2">"16sguild_Example"</span>
+input_type:<span class="w"> </span><span class="s2">"SampleData[PairedEndSequencesWithQuality]"</span>
+input_format:<span class="w"> </span><span class="s2">"PairedEndFastqManifestPhred33"</span>
+trim_forward:<span class="w"> </span><span class="s2">"GTGCCAGCMGCCGCGGTAA"</span>
+trim_reverse:<span class="w"> </span><span class="s2">"GGACTACHVGGGTWTCTAAT"</span>
 
 <span class="c1"># End of Part 1</span>
-trunc_forward:<span class="w"> </span><span class="s2">&quot;0&quot;</span>
-trunc_reverse:<span class="w"> </span><span class="s2">&quot;0&quot;</span>
-max:<span class="w"> </span><span class="s2">&quot;23700&quot;</span>
+trunc_forward:<span class="w"> </span><span class="s2">"0"</span>
+trunc_reverse:<span class="w"> </span><span class="s2">"0"</span>
+max:<span class="w"> </span><span class="s2">"23700"</span>
 
 <span class="c1"># End of Part 2</span>
 linkage_table:<span class="w"> </span>/input/ASV_linkage_table_date.txt
 </code></pre></div>
 <p>Resume the pipeline.</p>
 <h3 id="part-3">Part 3</h3>
-<p>Part 3 is involved with generating phylogenetic trees to run alpha rarefaction.</p>
+<p>Part 3 is involved with generating phylogenetic trees to run alpha rarefaction. This part takes approximately 15 minutes with 8 CPUs and 32 GB of memory allocated to each job.</p>
 <p>At the end of Part 3, users need to select the sampling depth value for alpha rarefaction. This graph can be found at <code>results/visualization/s14_alphaRarefaction/s14_input_alpha-rarefaction.qzv</code>. Load this file into the <a href="https://view.qiime2.org/">QIIME2 Viewer</a> and use the <code>observed_features</code> metric. Observe the graph and identify where the curves begin to flatten for each sample ID:</p>
 <p><img alt="Alpha rarefaction curve" src="../assets/alpha_rarefaction_curve.png" /></p>
 <p>Users can see for this example NYU data that they flatten out around 20,000. Enter this value in the params file and resume the pipeline:</p>
-<div class="highlight"><pre><span></span><code><span class="nl">samplesheet:</span><span class="w"> </span><span class="s2">&quot;manifest.csv&quot;</span>
-<span class="nl">metadata:</span><span class="w"> </span><span class="s2">&quot;metadata.txt&quot;</span>
-<span class="nl">base_name:</span><span class="w"> </span><span class="s2">&quot;16sguild_Example&quot;</span>
-<span class="nl">input_type:</span><span class="w"> </span><span class="s2">&quot;SampleData[PairedEndSequencesWithQuality]&quot;</span>
-<span class="nl">input_format:</span><span class="w"> </span><span class="s2">&quot;PairedEndFastqManifestPhred33&quot;</span>
-<span class="nl">trim_forward:</span><span class="w"> </span><span class="s2">&quot;GTGCCAGCMGCCGCGGTAA&quot;</span>
-<span class="nl">trim_reverse:</span><span class="w"> </span><span class="s2">&quot;GGACTACHVGGGTWTCTAAT&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nl">samplesheet:</span><span class="w"> </span><span class="s2">"manifest.csv"</span>
+<span class="nl">metadata:</span><span class="w"> </span><span class="s2">"metadata.txt"</span>
+<span class="nl">base_name:</span><span class="w"> </span><span class="s2">"16sguild_Example"</span>
+<span class="nl">input_type:</span><span class="w"> </span><span class="s2">"SampleData[PairedEndSequencesWithQuality]"</span>
+<span class="nl">input_format:</span><span class="w"> </span><span class="s2">"PairedEndFastqManifestPhred33"</span>
+<span class="nl">trim_forward:</span><span class="w"> </span><span class="s2">"GTGCCAGCMGCCGCGGTAA"</span>
+<span class="nl">trim_reverse:</span><span class="w"> </span><span class="s2">"GGACTACHVGGGTWTCTAAT"</span>
 
 <span class="err">#</span><span class="w"> </span><span class="n">End</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Part</span><span class="w"> </span><span class="mi">1</span>
-<span class="nl">trunc_forward:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span>
-<span class="nl">trunc_reverse:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span>
-<span class="nl">max:</span><span class="w"> </span><span class="s2">&quot;23700&quot;</span>
+<span class="nl">trunc_forward:</span><span class="w"> </span><span class="s2">"0"</span>
+<span class="nl">trunc_reverse:</span><span class="w"> </span><span class="s2">"0"</span>
+<span class="nl">max:</span><span class="w"> </span><span class="s2">"23700"</span>
 
 <span class="err">#</span><span class="w"> </span><span class="n">End</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Part</span><span class="w"> </span><span class="mi">2</span>
 <span class="nl">linkage_table:</span><span class="w"> </span><span class="s">/input/</span><span class="n">ASV_linkage_table_date</span><span class="o">.</span><span class="na">txt</span>
 
 <span class="err">#</span><span class="w"> </span><span class="n">End</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Part</span><span class="w"> </span><span class="mi">3</span>
-<span class="nl">sampling_depth:</span><span class="w"> </span><span class="s2">&quot;20000&quot;</span>
+<span class="nl">sampling_depth:</span><span class="w"> </span><span class="s2">"20000"</span>
 </code></pre></div>
 <p>Resume the pipeline.</p>
 <details class="info">

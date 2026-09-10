@@ -758,25 +758,25 @@ nextflow<span class="w"> </span>run<span class="w"> </span>main.nf<span class="w
 <h2 id="parameter-configuration">Parameter Configuration</h2>
 <p>Parameters are supplied in a config file, e.g. <code>params.yml</code>. Here is an example of a completed <code>params.yml</code> file. At the end of each part, users will need to examine their data and fill in the required values before continuing with their analysis.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Required initial parameters</span>
-samplesheet:<span class="w"> </span><span class="s2">&quot;samplesheet.csv&quot;</span>
-metadata:<span class="w"> </span><span class="s2">&quot;metadata.tsv&quot;</span>
-base_name:<span class="w"> </span><span class="s2">&quot;base_name_dataset&quot;</span>
-input_type:<span class="w"> </span><span class="s2">&quot;SampleData[PairedEndSequencesWithQuality]&quot;</span>
-input_format:<span class="w"> </span><span class="s2">&quot;PairedEndFastqManifestPhred33&quot;</span>
-trim_forward:<span class="w"> </span><span class="s2">&quot;GTGCCAGCMGCCGCGGTAA&quot;</span>
-trim_reverse:<span class="w"> </span><span class="s2">&quot;GGACTACHVGGGTWTCTAAT&quot;</span>
+samplesheet:<span class="w"> </span><span class="s2">"samplesheet.csv"</span>
+metadata:<span class="w"> </span><span class="s2">"metadata.tsv"</span>
+base_name:<span class="w"> </span><span class="s2">"base_name_dataset"</span>
+input_type:<span class="w"> </span><span class="s2">"SampleData[PairedEndSequencesWithQuality]"</span>
+input_format:<span class="w"> </span><span class="s2">"PairedEndFastqManifestPhred33"</span>
+trim_forward:<span class="w"> </span><span class="s2">"GTGCCAGCMGCCGCGGTAA"</span>
+trim_reverse:<span class="w"> </span><span class="s2">"GGACTACHVGGGTWTCTAAT"</span>
 
 <span class="c1"># Required parameters updated based on data</span>
 <span class="c1"># End of Part 1</span>
-trunc_forward:<span class="w"> </span><span class="s2">&quot;xxx&quot;</span>
-trunc_reverse:<span class="w"> </span><span class="s2">&quot;xxx&quot;</span>
-max:<span class="w"> </span><span class="s2">&quot;xxx&quot;</span>
+trunc_forward:<span class="w"> </span><span class="s2">"xxx"</span>
+trunc_reverse:<span class="w"> </span><span class="s2">"xxx"</span>
+max:<span class="w"> </span><span class="s2">"xxx"</span>
 
 <span class="c1"># End of Part 2</span>
 linkage_table:<span class="w"> </span>/path/to/file.txt
 
 <span class="c1"># End of Part 3</span>
-sampling_depth:<span class="w"> </span><span class="s2">&quot;xxx&quot;</span>
+sampling_depth:<span class="w"> </span><span class="s2">"xxx"</span>
 </code></pre></div>
 <p>An example parameters file is available in <a href="examples/params.yml"><code>examples/params.yml</code></a>.</p>
 <h2 id="brief-parameter-descriptions">Brief Parameter Descriptions</h2>
