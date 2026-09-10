@@ -230,7 +230,7 @@ The pipeline has set parts. The pipeline will run automatically through a part a
 
 ### Part 1
 
-Part 1 is involved with importing the FASTQ files, trimming the primer sequences, and QCing the samples.
+Part 1 is involved with importing the FASTQ files, trimming the primer sequences, and QCing the samples. This part takes approximately 10 minutes with 8 CPUs and 32 GB of memory allocated to each job.
 
 At the end of Part 1, the pipeline will automatically stop and say "**Pipeline Paused: End of Part 1**". Users will need to select trimming lengths for truncation and the maximum value for filtering unreliable sequences.
 
@@ -305,7 +305,7 @@ nextflow run zhao-microbiome-lab/16Sguild -params-file examples/params.yml -prof
 
 ### Part 2
 
-Part 2 is involved with denoising and quality filtering. It also generates a table of the ASVs contained in the sample.
+Part 2 is involved with denoising and quality filtering. It also generates a table of the ASVs contained in the sample. This part takes approximately 13 minutes with 8 CPUs and 32 GB of memory allocated to each job.
 
 During Part 2, take the table of ASVs — an RDS file found at `results/main_results/s11a_database/input_bundle.rds`. Download this file and upload it to the database website:
 
@@ -339,7 +339,7 @@ Resume the pipeline.
 
 ### Part 3
 
-Part 3 is involved with generating phylogenetic trees to run alpha rarefaction.
+Part 3 is involved with generating phylogenetic trees to run alpha rarefaction. This part takes approximately 15 minutes with 8 CPUs and 32 GB of memory allocated to each job.
 
 At the end of Part 3, users need to select the sampling depth value for alpha rarefaction. This graph can be found at `results/visualization/s14_alphaRarefaction/s14_input_alpha-rarefaction.qzv`. Load this file into the [QIIME2 Viewer](https://view.qiime2.org/) and use the `observed_features` metric. Observe the graph and identify where the curves begin to flatten for each sample ID:
 
